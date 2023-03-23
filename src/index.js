@@ -8,7 +8,7 @@
 let canvas, ctx;
 
 // set game patameters
-let board_size = 4;
+let board_size = 4, line_scale = 1/8;
 
 // initialize game with parameters
 
@@ -28,7 +28,10 @@ class Pawn {
 
     // set the styles for this shape
     ctx.fillStyle = this.suit;
-    ctx.lineWidth = 7;
+
+    let line_size = scale * line_scale;
+
+    ctx.lineWidth = line_size;
 
     // create the *path*
     ctx.beginPath();
@@ -50,7 +53,7 @@ class Pawn {
     ctx.fill();
     ctx.stroke();
 
-    ctx.lineWidth = 3.5;
+    ctx.lineWidth = line_size / 2;
     if (current_suit == this.suit) {
       ctx.strokeStyle = "gold";
     } else {
@@ -151,7 +154,7 @@ class board {
     // horiz lines
     for (let i = 0; i < 4; i++) {
       ctx.beginPath();
-      ctx.lineWidth = 10;
+      ctx.lineWidth = this.scale * line_scale;
       ctx.strokeStyle = "darkgray";
       let dx1, dy1, dx2;
       dx1 = 0.5 * this.scale;
@@ -166,7 +169,7 @@ class board {
     // virt lines
     for (let i = 0; i < 4; i++) {
       ctx.beginPath();
-      ctx.lineWidth = 10;
+      ctx.lineWidth = this.scale * line_scale;
       ctx.strokeStyle = "darkgray";
       let dx1, dy1, dy2;
       dy1 = 0.5 * this.scale;
@@ -181,7 +184,7 @@ class board {
     // horiz flavor
     for (let i = 0; i < 4; i++) {
       ctx.beginPath();
-      ctx.lineWidth = 5;
+      ctx.lineWidth = this.scale * line_scale * 0.5;
       ctx.strokeStyle = "white";
       let dx1, dy1, dx2;
       dx1 = 0.5 * this.scale;
@@ -196,7 +199,7 @@ class board {
     // virt flavor
     for (let i = 0; i < 4; i++) {
       ctx.beginPath();
-      ctx.lineWidth = 5;
+      ctx.lineWidth = this.scale * line_scale * 0.5;
       ctx.strokeStyle = "white";
       let dx1, dy1, dy2;
       dy1 = 0.5 * this.scale;
