@@ -1,0 +1,24 @@
+{
+  "name": "jul-gonu",
+  "version": "1.0.0",
+  "description": "a two-player abstract strategy board game from Korea",
+  "main": "index.html",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quixoticleprechauns/jul-gonu.git"
+  },
+  "author": "QuixoticLeprechauns",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quixoticleprechauns/jul-gonu/issues"
+  },
+  "homepage": "https://github.com/quixoticleprechauns/jul-gonu#readme",
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
