@@ -1,11 +1,83 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <title>Jul-Gonu</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="gameCanvas" width="500" height="500"></canvas>
-    <script type="module" src="index.js"></script>
-  
+    <nav class="navbar is-light">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item title" href="/">Jul Gonu</a>
+        </div>
 
-</body></html>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a href="/" class="navbar-item">Home</a>
+            <a href="#how-to-play" class="navbar-item">How to Play</a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a
+                class="button is-link"
+                href="https://github.com/quixoticleprechauns/jul-gonu/"
+              >
+                Github
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section container">
+      <div class="has-text-centered">
+        <canvas id="gameCanvas" width="300vh" height="300vh"></canvas>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+
+    <section class="section container" id="how-to-play">
+      <h2 class="title has-text-centered">How to Play</h2>
+      <div class="container content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
+          amet suscipit sem, vel pretium arcu. Vivamus mauris nibh, luctus et
+          felis at, venenatis vehicula elit. Integer dui nulla, ultricies non
+          auctor quis, consectetur id eros. Integer porttitor, lectus a blandit
+          volutpat, arcu sapien ultricies nibh, quis scelerisque magna nibh quis
+          nulla. Donec sit amet auctor nunc. Praesent tempor orci at nisl
+          venenatis rhoncus. Aliquam porta quam in fermentum egestas. Donec
+          venenatis gravida euismod. Nulla venenatis ligula a aliquam tempor.
+        </p>
+
+        <p>
+          Integer tempus condimentum sem nec luctus. Mauris imperdiet metus
+          condimentum dolor faucibus semper. Aliquam eget quam dignissim,
+          placerat ipsum id, ultrices turpis. Nulla odio ante, porta quis
+          vulputate eu, malesuada id ante. Suspendisse egestas pretium massa,
+          quis tristique sem sagittis sed. Etiam ac enim at tellus viverra
+          interdum. Pellentesque vitae posuere orci. Vivamus dapibus nisi in
+          bibendum pulvinar. Cras et orci non quam molestie dignissim.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Jul Gonu</strong> by
+          <a href="https://jgthms.com">QuixoticLeprechauns</a>. The source code
+          is licensed under
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+          website content is licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY NC SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
