@@ -20,5 +20,8 @@
   "homepage": "https://github.com/quixoticleprechauns/jul-gonu#readme",
   "devDependencies": {
     "snowpack": "^3.8.8"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4"
   }
 }
