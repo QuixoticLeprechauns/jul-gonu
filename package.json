@@ -22,6 +22,9 @@
     "snowpack": "^3.8.8"
   },
   "dependencies": {
-    "bulma": "^0.9.4"
+    "bulma": "^0.9.4",
+    "help": "^3.0.2",
+    "player.js": "^0.1.0",
+    "point.js": "^0.0.5"
   }
 }
