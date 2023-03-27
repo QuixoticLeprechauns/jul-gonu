@@ -85,7 +85,8 @@ class board {
     return -1;
   }
 
-  capture_pawns(stone, stones) {
+  capture_pawns(stone, stones)
+  {
     // check this stone for nearby pawns
 
     let dirs = [
