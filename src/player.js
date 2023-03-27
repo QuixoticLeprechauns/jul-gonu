@@ -1,4 +1,4 @@
-import {point} from "point.js";
+import "point.js";
 
 export class player
 {
