@@ -1,4 +1,4 @@
-import {point} from "point.js";
+import "./_snowpack/pkg/pointjs.js";
 
 export class player
 {

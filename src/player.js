@@ -22,6 +22,7 @@ export class player
             if(this.pawns[i] === pawn)
             {
                 this.pawns.splice(i, 1);
+                this.selection_index = -1;
                 return;
             }
         }
