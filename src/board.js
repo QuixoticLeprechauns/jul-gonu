@@ -1,13 +1,13 @@
-import "player.js";
-import "point.js";
+import "./player.js";
+import "./point.js";
 
-export class board
+export class Board
 {
     constructor(size = 4)
     {
         this.size = size;
         this.turn = 0;
-        this.players = [new player(size, 'dimgray'), new player(size, 'tomato')];
+        this.players = [new Player(size, 'dimgray'), new Player(size, 'tomato')];
 
         // init pawn locations
         for(let i = 0; i < size; i++)
@@ -43,11 +43,11 @@ export class board
                 if(players[j].pawns[i].location === location)
                 {
                     // returns {player index, pawn index}
-                    return new point(j, i);
+                    return new Point(j, i);
                 }
             }
         }
-        return new point(-1, -1);
+        return new Point(-1, -1);
     }
 
     perform_captures(location)

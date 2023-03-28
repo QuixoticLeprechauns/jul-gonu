@@ -1,5 +1,5 @@
 
-export class point
+export class Point
 {
     constructor (x = 0, y = 0)
     {

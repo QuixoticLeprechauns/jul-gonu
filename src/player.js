@@ -1,6 +1,6 @@
-import "point.js";
+import "./point.js";
 
-export class player
+export class Player
 {
     constructor (count = 4, color = 'magenta')
     {
@@ -12,7 +12,7 @@ export class player
 
     set_pawn(index, x = 0, y = 0)
     {
-        this.pawns[index] = new point(x, y);
+        this.pawns[index] = new Point(x, y);
     }
 
     move_selected_pawn(location)
