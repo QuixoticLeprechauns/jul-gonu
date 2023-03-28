@@ -30,8 +30,15 @@ export class Board
 
     attempt_move_pawn(location)
     {
+        let result = players[turn].move_selected_pawn(location);
+
         // if movement was valid, cycle turn
-        this.turn = (this.turn + 1) % this.players.length;
+        if(result != -1)
+        {
+            this.turn = (this.turn + 1) % this.players.length;
+        }
+
+        return result;
     }
 
     find_pawn(location)
