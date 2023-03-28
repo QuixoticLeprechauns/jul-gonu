@@ -1,4 +1,8 @@
 import "bulma/css/bulma.css";
+import "point.js";
+import "player.js";
+import "board.js";
+
 
 // add canvas to the script
 (function () {

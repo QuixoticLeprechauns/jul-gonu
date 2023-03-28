@@ -1,4 +1,5 @@
-import "player.js"
+import "player.js";
+import "point.js";
 
 export class board
 {
@@ -25,6 +26,12 @@ export class board
                 players[turn].selection_index = i;
             }
         }
+    }
+
+    attempt_move_pawn(location)
+    {
+        // if movement was valid, cycle turn
+        this.turn = (this.turn + 1) % this.players.length;
     }
 
     find_pawn(location)
