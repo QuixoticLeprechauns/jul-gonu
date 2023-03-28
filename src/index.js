@@ -5,7 +5,8 @@ import "./board.js";
 
 
 // add canvas to the script
-(function () {
+(function ()
+{
   const canvas = document.getElementById("gameCanvas");
   const ctx = canvas.getContext("2d");
 })();
@@ -16,6 +17,7 @@ let canvas, ctx;
 // set game patameters
 let board_size = 4,
   line_scale = 1 / 12;
+
 
 // initialize game with parameters
 
