@@ -35,6 +35,7 @@ export class board
             {
                 if(players[j].pawns[i].location === location)
                 {
+                    // returns {player index, pawn index}
                     return new point(j, i);
                 }
             }
@@ -72,14 +73,14 @@ export class board
                         // apply captures
                         for(let k = 0; k < captures.length; k++)
                         {
-                            players[(turn + 1) % 2].remove_pawn(captures[k]);
+                            players[captures[k].x].remove_pawn(captures[k].y);
                         }
                         break; // end capture, go to next direction
                     }
                     else
                     {
-                        // mark for capture
-                        captures.push(locus_delta);
+                        // mark for capture, both player index, and pawn index
+                        captures.push(found_index);
                     }
                 }
                 else
@@ -87,40 +88,6 @@ export class board
                     break; // capture invalid, go to next direction
                 }
             }
-            //
         }
-
-
-        
-
-          for (let k = 0; k < 4; k++)
-          {
-            let capturable = Array(0);
-      
-            // right
-            for (let i = 1; i < this.size; i++) {
-              let pawn_i = this.get_pawn(
-                stone.location.x + dirs[k].x * i,
-                stone.location.y + dirs[k].y * i
-              );
-              if (pawn_i === -1) {
-                break;
-              }
-              if (stones[pawn_i].suit != stone.suit) {
-                capturable.push(stones[pawn_i]);
-              }
-      
-              if (stones[pawn_i].suit === stone.suit) {
-                // remove the previous pawns
-                for (let j = 0; j < capturable.length; j++) {
-                  stones.splice(
-                    this.get_pawn(capturable[j].location.x, capturable[j].location.y),
-                    1
-                  );
-                }
-                break;
-              }
-            }
-          }
     }
 }

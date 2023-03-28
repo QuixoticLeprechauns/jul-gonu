@@ -15,16 +15,16 @@ export class player
         this.pawns[index] = new point(x, y);
     }
 
-    remove_pawn(pawn)
+    remove_pawn(index)
     {
-        for(let i = 0; i < this.pawns.length; i++)
-        {
-            if(this.pawns[i] === pawn)
-            {
+        //for(let i = 0; i < this.pawns.length; i++)
+        //{
+            //if(this.pawns[i] === pawn)
+            //{
                 this.pawns.splice(i, 1);
                 this.selection_index = -1;
-                return;
-            }
-        }
+                //return;
+            //}
+        //}
     }
 }
